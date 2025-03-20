@@ -61,7 +61,7 @@ export default function ServicesCarousel() {
           </button>
 
           <div className="relative w-[320px] md:w-[450px] h-[500px] overflow-visible">
-            {/* Next slide (showing behind) */}
+
             <div 
               className="absolute top-0 right-[-40px] w-[320px] md:w-[400px] h-[500px] shadow-lg rounded-lg overflow-hidden transform scale-90 opacity-50 z-0"
             >
@@ -72,7 +72,7 @@ export default function ServicesCarousel() {
               />
             </div>
 
-            {/* Current slide */}
+
             <div className="relative w-[320px] md:w-[400px] h-[500px] shadow-lg rounded-lg overflow-hidden z-10">
               <AnimatePresence mode="wait">
                 <motion.div
