@@ -1,4 +1,4 @@
-import Eyebrow from '../assets/eyebrow.jpg';
+import Eyebrow from '../co/eyebrow.jpg';
 import facial from '../assets/facial.jpg';
 import haircut from '../assets/haircut.jpg';
 import { useState } from "react";

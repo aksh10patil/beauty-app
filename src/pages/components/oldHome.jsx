@@ -2,7 +2,7 @@ import logo from '../assets/logo.svg';
 import hero from '../assets/hero.jpg';
 import heroimg from '../assets/heroimg.jpg';
 import Footer from './Footer';
-import ServicesCarousel from './ServiceList';
+import ServicesCarousel from '../ServiceList';
 
 export default function Header() {
     return (

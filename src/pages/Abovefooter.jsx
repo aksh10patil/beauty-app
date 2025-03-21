@@ -1,4 +1,5 @@
 import abovefooter from '../assets/abovefooter.webp';
+import logo from '../assets/Logo.webp'
 
 
 export default function BeautyGlowUp() {
@@ -95,11 +96,11 @@ export default function BeautyGlowUp() {
         </div>
 
 
-            <div className="bg-[#f8f5f0] text-gray-800 px-10 py-16">       
+            <div className="bg-white text-gray-800 px-10 py-16">       
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {/* Logo Section */}
+
         <div className="flex flex-col items-center md:items-start">
-          <img src="/logo.png" alt="Beauty at Home Logo" className="w-40 mb-4" />
+          <img src={logo} alt="Beauty at Home Logo" className="w-40 mb-4" />
           <p className="text-lg font-serif">Stay Updated</p>
           <p className="text-sm text-gray-600 mt-2">
             Beauty At Home | 2025 - All Rights Reserved <br />
@@ -142,13 +143,10 @@ export default function BeautyGlowUp() {
           </div>
         </div>
       </div>
-
-      {/* Appointment Form */}
-      
-
-                    
-             </div>
       </div>
+
+
+             </div>
 
 
 

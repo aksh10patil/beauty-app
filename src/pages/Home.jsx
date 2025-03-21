@@ -9,6 +9,7 @@ import ServiceList from './ServiceList'
 import Abovefooter from './Abovefooter'
 
 
+
 const BeautySalonHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
@@ -39,7 +40,7 @@ const BeautySalonHeader = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-white font-medium">Home</a>
-            <a href="#" className="text-white font-medium">About Us</a>
+            <a href="" className="text-white font-medium">About Us</a>
             <div className="relative group">
               <a href="#" className="text-white font-medium flex items-center">
                 Services
@@ -111,10 +112,12 @@ const BeautySalonHeader = () => {
         {/* Hero content */}
         <div className="flex-1 flex items-center px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-6xl md:text-8xl font-light text-white leading-tight">
-              Beautiful <span className="italic">you,</span>
+            <h1 className="text-6xl md:text-8xl font-dm font-light text-black leading-tight">
+            <span className="italic text-white">Bea</span>
+            <span className='italic'>utiful </span>
+               <span className="italic">you,</span>
               <br />
-              <span className="font-script text-5xl md:text-7xl text-pink-100 pl-12">from</span> head to toe
+              <span className="font-script text-5xl md:text-7xl text-pink-100 pl-12">from  </span><span className='font-dm italic'>head to toe</span>
             </h1>
             <p className="mt-6 text-white text-xl max-w-xl mx-auto">
               We're excited to offer a variety of services to make your nails, hair, makeup, brows, and lashes look great!
