@@ -8,6 +8,7 @@ import spaceimageleft from '../assets/spaceimageleft.webp';
 import ServiceList from './ServiceList'
 import Abovefooter from './Abovefooter'
 import { Link } from 'react-router-dom';
+import Header from './components/Header';
 
 
 
@@ -15,7 +16,7 @@ const BeautySalonHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   return (
-    <header className="relative w-full h-screen">
+    <div className="relative w-full h-screen">
       {/* Split background layout */}
       <div className="flex h-full">
         <div className="w-1/2 bg-gray-300">
@@ -29,86 +30,7 @@ const BeautySalonHeader = () => {
 
       <div className="absolute inset-0 flex flex-col">
         {/* Navigation bar */}
-        <nav className="flex items-center justify-between px-8 py-4">
-
-          {/* Logo */}
-          <div className="flex items-center">
-            <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center text-yellow-500 font-script">
-                  <img src={logo} alt = 'logo' className='w-full h-full object-cover' />
-            </div>
-          </div>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-white font-medium">Home</a>
-            <Link to="/about-us" className="text-white font-medium">About Us</Link>
-            <div className="relative group">
-              <a href="/Services" className="text-white font-medium flex items-center">
-                Services
-                <svg className="ml-1 w-1 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </a>
-            </div>
-
-              <a href="#" className="text-white font-medium">Blog</a>
-              <a href="#" className="text-white font-medium">Appointment</a>
-              <a href="#" className="text-white font-medium">Contacts</a>
-          
-          </div>
-          
-          {/* Search and Social Icons */}
-          <div className="hidden md:flex items-center space-x-6">
-            <button type="button" aria-label="Search" className="text-white">
-              <Search size={20} />
-            </button>
-            <a href="#" aria-label="Instagram" className="text-white">
-              <Instagram size={20} />
-            </a>
-            <a href="#" aria-label="Facebook" className="text-white">
-              <Facebook size={20} />
-            </a>
-            <a href="#" className="border border-white text-white px-4 py-2 hover:bg-white hover:text-pink-300 transition duration-300">
-              BOOK A VISIT
-            </a>
-          </div>
-          
-          {/* Mobile menu button */}
-          <button 
-            type="button" 
-            className="md:hidden text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </nav>
-        
-        {/* Mobile menu */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-gray-800 bg-opacity-90 p-4">
-            <div className="flex flex-col space-y-4">
-              <a href="#" className="text-white font-medium">Home</a>
-              <a href="#" className="text-white font-medium">About Us</a>
-              <a href="#" className="text-white font-medium">Services</a>
-              <a href="#" className="text-white font-medium">Blog</a>
-              <a href="#" className="text-white font-medium">Appointment</a>
-              <a href="#" className="text-white font-medium">Contacts</a>
-              <div className="flex space-x-4 pt-4">
-                <a href="#" aria-label="Instagram" className="text-white">
-                  <Instagram size={20} />
-                </a>
-                <a href="#" aria-label="Facebook" className="text-white">
-                  <Facebook size={20} />
-                </a>
-              </div>
-              <a href="#" className="border border-white text-white px-4 py-2 text-center">
-                BOOK A VISIT
-              </a>
-            </div>
-          </div>
-        )}
+        <Header />
         
         {/* Hero content */}
         <div className="flex-1 flex items-center px-8">
@@ -125,12 +47,16 @@ const BeautySalonHeader = () => {
             </p>
             
             {/* Services menu button */}
-            <div className="flex justify-center items-center mt-12">
-              <button className="bg-white rounded-full w-32 h-32 flex flex-col items-center justify-center text-gray-800 transform transition hover:scale-105">
+            <div className="flex justify-center items-center mt-12 href=">
+              <a href='/services'>
+              <button className="bg-white rounded-full w-32 h-32 
+              flex flex-col items-center justify-center text-gray-800 
+              transform transition hover:scale-105">
                 <span className="text-xs tracking-wider">OUR</span>
                 <span className="text-sm tracking-wider">SERVICES</span>
                 <span className="text-sm tracking-wider">MENU</span>
               </button>
+              </a>
             </div>
           </div>
         </div>
@@ -182,7 +108,7 @@ const BeautySalonHeader = () => {
           
 
 
-    </header>
+    </div>
 
 
 

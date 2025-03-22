@@ -1,7 +1,8 @@
 import React from 'react';
-import Menubar from './components/Menubar';
+import Header from './components/Header';
 import SignupAppointment from './components/SignupAppointment'
 import Photocarousel from './components/Photocarousel';
+
 
 function Services() {
     return (
@@ -40,7 +41,7 @@ function Services() {
 
 
 
-                    <Menubar />
+                    <Header />
                     <SignupAppointment />
                     <Photocarousel />
 

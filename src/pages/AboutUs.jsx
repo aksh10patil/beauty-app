@@ -4,7 +4,7 @@ import abovefooter from '../assets/abovefooter.webp';
 import aboutus from '../assets/aboutus.webp';
 import PhotoGallery from './components/PhotoGallery';
 import Form from './components/Form';
-import Menubar from './components/Menubar';
+import Header from './components/Header';
 
 
 function AboutUs() {
@@ -40,11 +40,10 @@ function AboutUs() {
                         <span class="ml-2 text-gray-700 font-medium">+91 9876543210 Instagram - Facebook</span>
                     </div>
                     </div>
+                    <Header />
 
 
-
-                <Menubar />
-
+                   
 
 
 
@@ -58,6 +57,7 @@ function AboutUs() {
                 class="w-full h-full object-cover"
                 />
             </div>
+            
             
 
             <div class="w-full md:w-1/2 bg-stone-100 flex items-center p-8 md:p-16">
@@ -113,11 +113,6 @@ function AboutUs() {
             <div>
                     <PhotoGallery />
                     <Form />
-
-                    
-
-
-
 
             </div>
 
