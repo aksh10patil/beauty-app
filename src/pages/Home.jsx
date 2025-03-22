@@ -7,6 +7,7 @@ import spaceimageright from '../assets/spaceimageright.webp';
 import spaceimageleft from '../assets/spaceimageleft.webp';
 import ServiceList from './ServiceList'
 import Abovefooter from './Abovefooter'
+import { Link } from 'react-router-dom';
 
 
 
@@ -40,9 +41,9 @@ const BeautySalonHeader = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-white font-medium">Home</a>
-            <a href="" className="text-white font-medium">About Us</a>
+            <Link to="/about-us" className="text-white font-medium">About Us</Link>
             <div className="relative group">
-              <a href="#" className="text-white font-medium flex items-center">
+              <a href="/Services" className="text-white font-medium flex items-center">
                 Services
                 <svg className="ml-1 w-1 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>

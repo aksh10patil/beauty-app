@@ -3,7 +3,7 @@ import dtanpg from '../../assets/dtanpg.webp';
 import bodymassagepg from '../../assets/bodymassagepg.webp';
 import manicurepg from '../../assets/manicurepg.webp';
 import pgeyebrow from '../../assets/pgeyebrow.webp';
-import form from ''
+
 
 export default function PhotoGallery() {
   const scrollContainerRef = useRef(null);
