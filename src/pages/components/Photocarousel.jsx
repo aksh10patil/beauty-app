@@ -7,7 +7,7 @@ import pcarousel5 from '../../assets/pcarousel5.webp'
 import pcarousel6 from '../../assets/pcarousel6.webp'
 
 function Photocarousel() {
-  // Direct references to the imported images
+
   const serviceImages = [
     pcarousel1,
     pcarousel2,
@@ -18,8 +18,8 @@ function Photocarousel() {
   ];
 
   return (
-    <div className="w-full overflow-hidden mt-5">
-      {/* On mobile, make this scrollable horizontally */}
+    <div className="w-full overflow-hidden mt-10">
+
       <div className="flex overflow-x-auto space-x-4 pb-4">
         {serviceImages.map((image, index) => (
           <div 

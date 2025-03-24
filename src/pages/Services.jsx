@@ -78,7 +78,7 @@ const Services = ({ cart = [], setCart }) => {
         <>
             <Header />
             <div className="min-h-screen bg-gray-50">
-                {/* Page Header */}
+
                 <section className="bg-pink-100 py-16 text-center">
                     <h1 className="text-4xl font-bold text-gray-800">Our Services</h1>
                     <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto px-4">
@@ -86,7 +86,7 @@ const Services = ({ cart = [], setCart }) => {
                     </p>
                 </section>
 
-                {/* Services Container */}
+
                 <section className="max-w-6xl mx-auto py-16 px-4">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {services.map(service => (
@@ -124,7 +124,7 @@ const Services = ({ cart = [], setCart }) => {
                     </div>
                 </section>
 
-                {/* Cart */}
+
                 <div className={`fixed right-0 top-0 h-full w-80 bg-white shadow-lg transform transition-transform ${isCartOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <div className="p-4 bg-pink-500 text-white flex justify-between items-center">
                         <h2 className="text-xl font-bold flex items-center">
@@ -181,7 +181,7 @@ const Services = ({ cart = [], setCart }) => {
                     </div>
                 </div>
 
-                {/* Floating Cart Button */}
+
                 <button
                     className="fixed bottom-6 right-6 bg-pink-500 text-white p-3 rounded-full shadow-lg hover:bg-pink-600 transition flex items-center justify-center"
                     onClick={() => setIsCartOpen(!isCartOpen)}

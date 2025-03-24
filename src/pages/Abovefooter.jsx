@@ -1,6 +1,7 @@
 import abovefooter from '../assets/abovefooter.webp';
 import logo from '../assets/Logo.webp'
 import Footer from './components/Footer';
+import AppointmentForm from './components/AppointmentForm';
 
 
 export default function BeautyGlowUp() {
@@ -44,12 +45,13 @@ export default function BeautyGlowUp() {
             </li>
         
           </ul>
-          <button className="bg-white text-gray-800 text-sm mt-4 tracking-wides px-4 py-3 border
-           border-white hover:bg-gray-200 rounded-md transition">
-                LEARN MORE
+          <button 
+              onClick={() => window.location.href = '/packages'} 
+              className="bg-white text-gray-800 text-sm mt-4 tracking-wides px-4 py-3 border border-white hover:bg-gray-200 rounded-md transition"
+                 >
+              LEARN MORE
             </button>
-        </div>
-        
+                    </div>
         
       </div>
 
@@ -67,29 +69,9 @@ export default function BeautyGlowUp() {
         </div>
 
         {/* Appointment Form - Right Side */}
-        <div className="bg-[#b37c86] text-white p-10 rounded-lg">
-          <h2 className="text-3xl font-serif mb-6">Book an appointment</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <select className="bg-transparent border-b border-white p-2 focus:outline-none">
-              <option>Select Service</option>
-            </select>
-            <select className="bg-transparent border-b border-white p-2 focus:outline-none">
-              <option>Select Stylists</option>
-            </select>
-            <input type="text" placeholder="Your Name" className="bg-transparent border-b border-white p-2 focus:outline-none" />
-            <input type="text" placeholder="Your Phone" className="bg-transparent border-b border-white p-2 focus:outline-none" />
-            <input type="date" className="bg-transparent border-b border-white p-2 focus:outline-none" />
-            <select className="bg-transparent border-b border-white p-2 focus:outline-none">
-              <option>Select</option>
-            </select>
-            <select className="bg-transparent border-b border-white p-2 focus:outline-none">
-              <option>Select</option>
-            </select>
-          </div>
-          <button className="mt-6 bg-white text-gray-800 px-6 py-2 font-semibold tracking-wide border border-white hover:bg-gray-200">
-            MAKE AN APPOINTMENT
-          </button>
-        </div>
+
+        <AppointmentForm />
+
       </div>
     </div>
                 

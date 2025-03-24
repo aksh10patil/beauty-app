@@ -2,14 +2,6 @@
 import logo from '../../assets/logo.webp'
 
 
-
-
-
-
-
-
-
-
 function Footer () {
     return (
         <div>
@@ -23,12 +15,12 @@ function Footer () {
                     <p className="text-lg font-serif">Stay Updated</p>
                     <p className="text-sm text-gray-600 mt-2">
                         Beauty At Home | 2025 - All Rights Reserved <br />
-                        Developed By Visualize Digital
+
                     </p>
                     </div>
                     
 
-                    {/* Pages Section */}
+
                     <div>
                     <h3 className="text-gray-500 uppercase text-sm tracking-wide mb-4">Pages</h3>
                     <ul className="space-y-2">
@@ -39,7 +31,7 @@ function Footer () {
                     </ul>
                     </div>
 
-                    {/* Contact Section */}
+
                     <div>
                     <h3 className="text-gray-500 uppercase text-sm tracking-wide mb-4">Contacts</h3>
                     <p className="text-gray-700">
@@ -54,7 +46,7 @@ function Footer () {
                     </p>
                     <p className="text-gray-600">info@beautyathome.co.in</p>
 
-                    {/* Social Media */}
+
                     <div className="flex space-x-4 mt-4">
                         <a href="#"><i className="fab fa-instagram text-2xl"></i></a>
                         <a href="#"><i className="fab fa-x-twitter text-2xl"></i></a>
