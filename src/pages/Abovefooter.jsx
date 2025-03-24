@@ -1,5 +1,5 @@
 import abovefooter from '../assets/abovefooter.webp';
-import logo from '../assets/Logo.webp'
+import logo from '../assets/logo.webp'
 import Footer from './components/Footer';
 import AppointmentForm from './components/AppointmentForm';
 
