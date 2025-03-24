@@ -2,11 +2,11 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import React, { useState } from 'react';
 import Home from "./pages/Home"
 import AboutUs from "./pages/AboutUs"
-import Appointment from './pages/Appointment';
-import Services from './pages/Services';
-import Checkout from './pages/Checkout';
-import Packages from './pages/Packages';
-import Contact from './pages/Contact';
+import Appointment from "./pages/Appointment";
+import Services from "./pages/Services";
+import Checkout from "./pages/Checkout";
+import Packages from  "./pages/Packages";
+import Contact from "./pages/Contact";
 
 export default function App() {
   const [cart, setCart] = useState([]);
