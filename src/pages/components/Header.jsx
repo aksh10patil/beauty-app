@@ -30,9 +30,9 @@ export default function BeautySalonHeader() {
               </svg>
             </a>
           </div>
-          <a href="#" className="text-white font-medium">Blog</a>
-          <a href="#" className="text-white font-medium">Appointment</a>
-          <a href="#" className="text-white font-medium">Contacts</a>
+          <a href="" className="text-white font-medium">Blog</a>
+          <a href="/Appointment" className="text-white font-medium">Appointment</a>
+          <a href="/Packages" className="text-white font-medium">Packages</a>
         </div>
 
         <div className="hidden md:flex items-center space-x-6">
