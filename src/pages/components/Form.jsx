@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../../assets/Logo.webp'
+import logo from '../../assets/logo.webp'
 
 const AppointmentScheduler = () => {
   const [formData, setFormData] = useState({
