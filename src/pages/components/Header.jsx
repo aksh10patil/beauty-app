@@ -6,9 +6,7 @@ import { Search, Instagram, Facebook } from 'lucide-react';
 export default function BeautySalonHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const isHomePage = location.pathname === '/Home' || location.pathname === '/';
-
-  
+  const isHomePage = location.pathname === '/' || location.pathname === '/Home';
 
   return (
     <>
@@ -20,19 +18,17 @@ export default function BeautySalonHeader() {
         </div>
 
         <div className="hidden md:flex items-center space-x-8">
-          <a href="/Home" className="text-white font-medium">Home</a>
-          <Link to="/About-us" className="text-white font-medium">About Us</Link>
-          <div className="relative group">
-            <a href="/Services" className="text-white font-medium flex items-center">
-              Services
-              <svg className="ml-1 w-1 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </a>
-          </div>
-          <a href="" className="text-white font-medium">Blog</a>
-          <a href="/Appointment" className="text-white font-medium">Appointment</a>
-          <a href="/Packages" className="text-white font-medium">Packages</a>
+          <Link to="/" className="text-white font-medium">Home</Link>
+          <Link to="/about-us" className="text-white font-medium">About Us</Link>
+          <Link to="/Services" className="text-white font-medium flex items-center">
+            Services
+            <svg className="ml-1 w-1 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </Link>
+          <Link to="/Blog" className="text-white font-medium">Blog</Link>
+          <Link to="/Appointment" className="text-white font-medium">Appointment</Link>
+          <Link to="/Packages" className="text-white font-medium">Packages</Link>
         </div>
 
         <div className="hidden md:flex items-center space-x-6">
@@ -45,9 +41,9 @@ export default function BeautySalonHeader() {
           <a href="#" aria-label="Facebook" className="text-white">
             <Facebook size={20} />
           </a>
-          <a href="/Services" className="border border-white text-white px-4 py-2 hover:bg-white hover:text-pink-300 transition duration-300">
+          <Link to="/Services" className="border border-white text-white px-4 py-2 hover:bg-white hover:text-pink-300 transition duration-300">
             BOOK A VISIT
-          </a>
+          </Link>
         </div>
 
         <button 
@@ -65,12 +61,12 @@ export default function BeautySalonHeader() {
       {isMenuOpen && (
         <div className="md:hidden bg-gray-800 bg-opacity-90 p-4">
           <div className="flex flex-col space-y-4">
-            <a href="#" className="text-white font-medium">Home</a>
-            <a href="#" className="text-white font-medium">About Us</a>
-            <a href="#" className="text-white font-medium">Services</a>
-            <a href="#" className="text-white font-medium">Blog</a>
-            <a href="#" className="text-white font-medium">Appointment</a>
-            <a href="#" className="text-white font-medium">Contacts</a>
+            <Link to="/" className="text-white font-medium">Home</Link>
+            <Link to="/about-us" className="text-white font-medium">About Us</Link>
+            <Link to="/Services" className="text-white font-medium">Services</Link>
+            <Link to="/Blog" className="text-white font-medium">Blog</Link>
+            <Link to="/Appointment" className="text-white font-medium">Appointment</Link>
+            <Link to="/Contact" className="text-white font-medium">Contacts</Link>
             <div className="flex space-x-4 pt-4">
               <a href="#" aria-label="Instagram" className="text-white">
                 <Instagram size={20} />
@@ -79,9 +75,9 @@ export default function BeautySalonHeader() {
                 <Facebook size={20} />
               </a>
             </div>
-            <a href="#" className="border border-white text-white px-4 py-2 text-center">
+            <Link to="/Services" className="border border-white text-white px-4 py-2 text-center">
               BOOK A VISIT
-            </a>
+            </Link>
           </div>
         </div>
       )}
