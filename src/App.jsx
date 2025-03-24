@@ -14,7 +14,7 @@ export default function App() {
  
   return (
       <>
-        <Router>
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
@@ -24,7 +24,6 @@ export default function App() {
             <Route path="/Services" element={<Services cart={cart} setCart={setCart} />} />
             <Route path="/Checkout" element={<Checkout cart={cart} setCart={setCart}/>} />
           </Routes>
-        </Router>
 
       </>
   )
