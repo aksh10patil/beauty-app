@@ -58,7 +58,7 @@ const Services = ({ cart = [], setCart }) => {
             price: option.price
         };
         setCart((prevCart) => [...prevCart, cartItem]);
-        setIsCartOpen(true);
+        setIsCartOpen(false);
     }, [setCart]);
 
     const removeFromCart = React.useCallback((itemId) => {

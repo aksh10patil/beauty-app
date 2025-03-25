@@ -59,18 +59,21 @@ export default function BeautyGlowUp() {
         <div className="bg-[#f8f5f0] text-gray-800 px-10 py-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         
-        {/* Heading - Left Side */}
-        <div className="text-left">
-          <h2 className="text-4xl font-serif text-gray-800 leading-tight">
-            Why wait? <br />
-            <span className="text-[#b37c86]">Book us now</span> and enjoy <br />
-            your relaxing afternoon with us
-          </h2>
-        </div>
 
-        {/* Appointment Form - Right Side */}
 
-        <AppointmentForm />
+
+                {/* Heading - Left Side */}
+                {/* <div className="text-left">
+                  <h2 className="text-4xl font-serif text-gray-800 leading-tight">
+                    Why wait? <br />
+                    <span className="text-[#b37c86]">Book us now</span> and enjoy <br />
+                    your relaxing afternoon with us
+                  </h2>
+                </div> */}
+
+                {/* Appointment Form - Right Side */}
+
+                {/* <AppointmentForm /> */}
 
       </div>
     </div>

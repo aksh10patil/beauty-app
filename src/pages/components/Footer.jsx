@@ -41,13 +41,17 @@ function Footer() {
                         <p className="text-gray-600">info@beautyathome.co.in</p>
 
                         <div className="flex space-x-4 mt-4">
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-600">
+
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" 
+                            className="text-gray-600 hover:text-pink-600">
                                 <Instagram size={24} />
                             </a>
-                            <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black">
+                            <a href="https://x.com" target="_blank" rel="noopener noreferrer" 
+                            className="text-gray-600 hover:text-black">
                                 <Twitter size={24} />
                             </a>
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
+                            className="text-gray-600 hover:text-blue-600">
                                 <Facebook size={24} />
                             </a>
                         </div>

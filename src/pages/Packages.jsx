@@ -117,7 +117,7 @@ const Packages = ({ cart = [], setCart }) => {
             price: parseFloat(pkg.price.replace('₹', ''))
         };
         setCart((prevCart) => [...prevCart, cartItem]);
-        setIsCartOpen(true);
+        setIsCartOpen(false);
     }, [setCart]);
 
     const removeFromCart = React.useCallback((itemId) => {

@@ -58,13 +58,13 @@ If you have any questions or need to make changes, feel free to reach out.
 Beauty At Home  
 `);
     
-    // Replace with your business phone number
+
     const phoneNumber = '917069990055';
     
-    // Create WhatsApp URL
+
     const whatsappURL = `https://wa.me/+${phoneNumber}?text=${encodedMessage}`;
     
-    // Open WhatsApp in a new tab
+
     window.open(whatsappURL, '_blank');
   };
 
