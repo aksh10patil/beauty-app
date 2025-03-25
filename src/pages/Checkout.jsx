@@ -253,6 +253,7 @@ const Checkout = ({ cart = [], setCart }) => {
                               className="mr-2"
                             />
                             Pay with Card
+                             / Upi / NetBanking
                           </label>
                           <label className={`border rounded p-3 flex items-center cursor-pointer ${formData.paymentMethod === 'cash' ? 'border-pink-500 bg-pink-50' : ''}`}>
                             <input
