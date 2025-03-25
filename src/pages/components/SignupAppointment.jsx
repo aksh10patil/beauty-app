@@ -1,5 +1,17 @@
-import React from 'react';
+import React , { useState } from 'react';
 import appointment from '../../assets/appointment.webp'
+
+const AppointmentForm = ( ) => {
+  const [fomrData, setFormData] = useState( {
+    
+  })
+}
+
+
+
+
+
+
 
 function SignupAppointment() {
   return (

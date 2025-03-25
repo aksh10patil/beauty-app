@@ -50,15 +50,14 @@ const BeautySalonHeader = () => {
             
             {/* Services menu button */}
             <div className="flex justify-center items-center mt-12 href=">
-              <a href='/services'>
-              <button className="bg-white rounded-full w-32 h-32 
+            <Link to="/Services" className="text-white font-medium"> <button className="bg-white rounded-full w-32 h-32 
               flex flex-col items-center justify-center text-gray-800 
               transform transition hover:scale-105">
+                
                 <span className="text-xs tracking-wider">OUR</span>
                 <span className="text-sm tracking-wider">SERVICES</span>
                 <span className="text-sm tracking-wider">MENU</span>
-              </button>
-              </a>
+              </button></Link>
             </div>
           </div>
         </div>
