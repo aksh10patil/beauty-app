@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { ShoppingCart, ArrowLeft, Calendar, Check } from 'lucide-react';
 import Footer from './components/Footer';
 import axios from 'axios'; // Make sure to install axios
-require('dotenv').config();
+
 
 
 const Checkout = ({ cart = [], setCart }) => {
@@ -81,7 +81,7 @@ const Checkout = ({ cart = [], setCart }) => {
       const { id: order_id } = orderResponse.data;
 
       const options = {
-        key: process.env.RAZORPAY_KEY_ID, // Replace with your Razorpay key
+        key: "rzp_test_G5uv0PRAgoyYhd", // Replace with your Razorpay key
         amount: total * 100, // Amount in paise
         currency: "INR",
         name: "Your Company Name",
