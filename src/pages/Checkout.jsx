@@ -3,6 +3,9 @@ import Header from './components/Header';
 import { useNavigate } from 'react-router-dom';
 import { ShoppingCart, ArrowLeft, Calendar, Check } from 'lucide-react';
 import Footer from './components/Footer';
+import axios from 'axios'; // Make sure to install axios
+
+
 
 const Checkout = ({ cart = [], setCart }) => {
   const navigate = useNavigate();
@@ -51,20 +54,105 @@ const Checkout = ({ cart = [], setCart }) => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const initializeRazorpay = () => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = "https://checkout.razorpay.com/v1/checkout.js";
+      script.onload = () => {
+        resolve(true);
+      };
+      script.onerror = () => {
+        resolve(false);
+      };
+      document.body.appendChild(script);
+    });
+  };
+
+  const handlePayment = async () => {
+    const total = getCartTotal();
+
+    try {
+      // Create order
+      const orderResponse = await axios.post('http://localhost:4000/api/create-order', {
+        courseId: Math.floor(Math.random() * 10), // You can modify this as needed
+        amount: total
+      });
+
+      const { id: order_id } = orderResponse.data;
+
+      const options = {
+        key: "rzp_test_G5uv0PRAgoyYhd", // Replace with your Razorpay key
+        amount: total * 100, // Amount in paise
+        currency: "INR",
+        name: "Your Company Name",
+        description: "Test Transaction",
+        order_id: order_id,
+        handler: async function (response) {
+          try {
+            // Verify payment
+            const verifyResponse = await axios.post('http://localhost:4000/api/verifyPayment', {
+              order_id: order_id,
+              payment_Id: response.razorpay_payment_id,
+              signature: response.razorpay_signature
+            });
+
+            if (verifyResponse.data.success) {
+              // Payment successful
+              completeBooking();
+            } else {
+              // Payment verification failed
+              alert("Payment verification failed");
+            }
+          } catch (error) {
+            console.error("Payment verification error", error);
+            alert("Payment verification failed");
+          }
+        },
+        prefill: {
+          name: formData.name,
+          email: formData.email,
+          contact: formData.phone
+        },
+        theme: {
+          color: "#F5A623"
+        }
+      };
+
+      const paymentObject = new window.Razorpay(options);
+      paymentObject.open();
+    } catch (error) {
+      console.error("Payment initialization error", error);
+      alert("Failed to initialize payment");
+    }
+  };
+
+  const completeBooking = () => {
+    setIsSubmitting(false);
+    setSubmitted(true);
+    // Clear cart after successful submission
+    if (setCart) setCart([]);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (!validateForm()) return;
     
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      // Clear cart after successful submission
-      if (setCart) setCart([]);
-    }, 1500);
+    // If payment method is card, initialize Razorpay
+    if (formData.paymentMethod === 'card') {
+      const razorpayLoaded = await initializeRazorpay();
+      if (!razorpayLoaded) {
+        alert("Razorpay SDK failed to load");
+        setIsSubmitting(false);
+        return;
+      }
+      handlePayment();
+    } else {
+      // For cash payment, directly complete booking
+      completeBooking();
+    }
   };
 
   if (submitted) {
