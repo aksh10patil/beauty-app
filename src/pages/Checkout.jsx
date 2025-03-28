@@ -88,7 +88,7 @@ const Checkout = ({ cart = [], setCart }) => {
 
     try {
       // Create order
-      const orderResponse = await axios.post(`${import.meta.env.PORT}/api/create-order`, {
+      const orderResponse = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/create-order`, {
         courseId: Math.floor(Math.random() * 10), // You can modify this as needed
         amount: total
       });
@@ -105,7 +105,8 @@ const Checkout = ({ cart = [], setCart }) => {
         handler: async function (response) {
           try {
             // Verify payment
-            const verifyResponse = await axios.post(`${import.meta.env.PORT}/api/create-order`, {
+            const verifyResponse = await axios.post(
+              `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/verifyPayment`, {
               order_id: order_id,
               payment_Id: response.razorpay_payment_id,
               signature: response.razorpay_signature
