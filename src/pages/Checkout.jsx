@@ -40,8 +40,6 @@ const Checkout = ({ cart = [], setCart }) => {
     window.open(whatsappUrl, '_blank');
   };
 
-  
-
   const validateForm = () => {
     const newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Name is required";

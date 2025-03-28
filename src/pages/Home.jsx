@@ -96,24 +96,13 @@ const BeautySalonHeader = () => {
         />
       </div>
 
-
     </div>
   </div>
 
   <ServiceList />
   <Abovefooter />
   <Footer />
-
-  
-    
-
-          
-
-
     </div>
-
-
-
     
   );
 };
