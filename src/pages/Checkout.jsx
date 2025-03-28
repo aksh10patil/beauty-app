@@ -6,7 +6,6 @@ import Footer from './components/Footer';
 import axios from 'axios'; // Make sure to install axios
 
 
-
 const Checkout = ({ cart = [], setCart }) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -25,6 +24,23 @@ const Checkout = ({ cart = [], setCart }) => {
   const getCartTotal = () => {
     return cart.reduce((total, item) => total + item.price, 0);
   };
+
+
+  const whatsapplink = () => {
+    // Replace with the actual business phone number (include country code)
+    const phoneNumber = '7225010093'; // Example: use your actual business phone number
+    
+    // Optional: Customize the default message
+    const message = encodeURIComponent('Hello, I would like to get more information.');
+    
+    // Construct WhatsApp web URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+  };
+
+  
 
   const validateForm = () => {
     const newErrors = {};
@@ -67,6 +83,7 @@ const Checkout = ({ cart = [], setCart }) => {
       document.body.appendChild(script);
     });
   };
+  
 
   const handlePayment = async () => {
     const total = getCartTotal();
@@ -155,6 +172,8 @@ const Checkout = ({ cart = [], setCart }) => {
     }
   };
 
+
+
   if (submitted) {
     return (
       <>
@@ -196,6 +215,15 @@ const Checkout = ({ cart = [], setCart }) => {
                 className="bg-pink-500 text-white py-2 px-6 rounded hover:bg-pink-600 transition"
               >
                 Book Another Service
+              </button>
+            </div>
+             
+            <div className="text-center mt-8">
+              <button 
+                onClick={whatsapplink}
+                className="bg-green-500 text-white py-2 px-6 rounded hover:bg-green-400 transition"
+              >
+               Link to Whatsapp
               </button>
             </div>
           </div>
@@ -400,5 +428,7 @@ const Checkout = ({ cart = [], setCart }) => {
     </>
   );
 };
+
+
 
 export default Checkout;

@@ -195,9 +195,6 @@ const AppointmentScheduler = () => {
               MAKE AN APPOINTMENT
             </button>
             <p className="mt-3 text-gray-500 text-sm">
-              <button type="button" className="underline focus:outline-none">
-                Edit form
-              </button>
             </p>
           </div>
         </form>
